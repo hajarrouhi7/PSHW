@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('CardNumber');
             $table->date('ExpiryDate');
             $table->Integer('CVV');
+            $table->foreignId('reservations_id')->contrained('reservations');
             $table->timestamps();
         });
     }
